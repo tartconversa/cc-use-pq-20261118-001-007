@@ -1,0 +1,124 @@
+{
+  "current_adjudication": {
+    "adjudicator": "carol",
+    "audience": "general",
+    "event_no": 27,
+    "reason": "ruling on corrected revision: evidence supports negative",
+    "stance": "negative",
+    "topic": "technology"
+  },
+  "current_head": 33,
+  "current_snapshot": {
+    "audience": "general",
+    "category": "eligible",
+    "external_id": "d",
+    "observation_status": "active",
+    "origin": "local-fixture",
+    "outlet": "Outlet C",
+    "review_status": "adjudicated",
+    "revision": 2,
+    "source_id": "south-a",
+    "stance": "negative",
+    "story_key": "story-4",
+    "topic": "technology"
+  },
+  "events": [
+    {
+      "entity_key": "local-fixture/d",
+      "event_no": 10,
+      "kind": "observation_ingested",
+      "occurred_at": "2026-11-18T09:33:51+00:00",
+      "payload_hash": "929f20e1902a3c46ea30eea1d3233d283de270adb45fe675ae69eaa69579fe45"
+    },
+    {
+      "entity_key": "local-fixture/d",
+      "event_no": 24,
+      "kind": "observation_corrected",
+      "occurred_at": "2026-11-18T09:33:51+00:00",
+      "payload_hash": "dbe1999e73f7ff9e6260a3115247f3b0fec036a9ca511163a13147ee1ac3fe60"
+    },
+    {
+      "entity_key": "local-fixture/d/2",
+      "event_no": 27,
+      "kind": "case_adjudicated",
+      "occurred_at": "2026-11-18T09:33:51+00:00",
+      "payload_hash": "d07dac5380706b09d5d1474dc4b6b6bfa0e5c7216265b0e925728b581cdac5ca"
+    }
+  ],
+  "external_id": "d",
+  "frozen_head": 21,
+  "frozen_snapshot": {
+    "audience": "general",
+    "category": "eligible",
+    "external_id": "d",
+    "observation_status": "active",
+    "origin": "local-fixture",
+    "outlet": "Outlet C",
+    "review_status": "consensus",
+    "revision": 1,
+    "source_id": "south-a",
+    "stance": "positive",
+    "story_key": "story-4",
+    "topic": "technology"
+  },
+  "origin": "local-fixture",
+  "release_id": "november-2026",
+  "revisions": [
+    {
+      "coding": {
+        "audience": "general",
+        "stance": "positive",
+        "topic": "technology"
+      },
+      "coding_status": "consensus",
+      "data": {
+        "external_id": "d",
+        "headline": "Synthetic observation d",
+        "origin": "local-fixture",
+        "published_at": "2026-11-01T10:00:00+00:00",
+        "received_at": "2026-11-02T09:00:00+00:00",
+        "source_id": "south-a",
+        "story_key": "story-4",
+        "url": "https://example.invalid/d"
+      },
+      "decision_ids": [
+        "d-alice-r1",
+        "d-bob-r1"
+      ],
+      "is_head": false,
+      "observation_status": "active",
+      "payload_hash": "929f20e1902a3c46ea30eea1d3233d283de270adb45fe675ae69eaa69579fe45",
+      "retraction_reason": null,
+      "revision": 1,
+      "supersedes": null
+    },
+    {
+      "coding": {
+        "audience": "general",
+        "stance": "negative",
+        "topic": "technology"
+      },
+      "coding_status": "adjudicated",
+      "data": {
+        "external_id": "d",
+        "headline": "Corrected claims",
+        "origin": "local-fixture",
+        "published_at": "2026-11-01T10:00:00+00:00",
+        "received_at": "2026-11-02T09:00:00+00:00",
+        "source_id": "south-a",
+        "story_key": "story-4",
+        "url": "https://example.invalid/d"
+      },
+      "decision_ids": [
+        "d-alice-r2",
+        "d-bob-r2"
+      ],
+      "is_head": true,
+      "observation_status": "active",
+      "payload_hash": "dbe1999e73f7ff9e6260a3115247f3b0fec036a9ca511163a13147ee1ac3fe60",
+      "retraction_reason": null,
+      "revision": 2,
+      "supersedes": 1
+    }
+  ]
+}

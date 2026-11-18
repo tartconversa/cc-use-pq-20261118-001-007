@@ -1,0 +1,82 @@
+{
+  "current_adjudication": null,
+  "current_head": 33,
+  "current_snapshot": {
+    "audience": "general",
+    "category": "retracted",
+    "external_id": "c",
+    "observation_status": "retracted",
+    "origin": "local-fixture",
+    "outlet": "Outlet A",
+    "review_status": "consensus",
+    "revision": 1,
+    "source_id": "north-a",
+    "stance": "positive",
+    "story_key": "story-3",
+    "topic": "technology"
+  },
+  "events": [
+    {
+      "entity_key": "local-fixture/c",
+      "event_no": 8,
+      "kind": "observation_ingested",
+      "occurred_at": "2026-11-18T09:33:51+00:00",
+      "payload_hash": "dbdceb5b4e134539867b4cf8883fcb30cc7eceea567240ceb98dce8a339ba78c"
+    },
+    {
+      "entity_key": "local-fixture/c",
+      "event_no": 23,
+      "kind": "observation_retracted",
+      "occurred_at": "2026-11-18T09:33:51+00:00",
+      "payload_hash": "9ef0719d6439ccb7c2e791deea4506c46a34f2b18000dd1bcf843fafad94eb3a"
+    }
+  ],
+  "external_id": "c",
+  "frozen_head": 21,
+  "frozen_snapshot": {
+    "audience": "general",
+    "category": "eligible",
+    "external_id": "c",
+    "observation_status": "active",
+    "origin": "local-fixture",
+    "outlet": "Outlet A",
+    "review_status": "consensus",
+    "revision": 1,
+    "source_id": "north-a",
+    "stance": "positive",
+    "story_key": "story-3",
+    "topic": "technology"
+  },
+  "origin": "local-fixture",
+  "release_id": "november-2026",
+  "revisions": [
+    {
+      "coding": {
+        "audience": "general",
+        "stance": "positive",
+        "topic": "technology"
+      },
+      "coding_status": "consensus",
+      "data": {
+        "external_id": "c",
+        "headline": "Synthetic observation c",
+        "origin": "local-fixture",
+        "published_at": "2026-11-01T10:00:00+00:00",
+        "received_at": "2026-11-02T09:00:00+00:00",
+        "source_id": "north-a",
+        "story_key": "story-3",
+        "url": "https://example.invalid/c"
+      },
+      "decision_ids": [
+        "c-alice-r1",
+        "c-bob-r1"
+      ],
+      "is_head": true,
+      "observation_status": "retracted",
+      "payload_hash": "dbdceb5b4e134539867b4cf8883fcb30cc7eceea567240ceb98dce8a339ba78c",
+      "retraction_reason": "source issued correction and withdrew",
+      "revision": 1,
+      "supersedes": null
+    }
+  ]
+}

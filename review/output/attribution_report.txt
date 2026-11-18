@@ -1,0 +1,74 @@
+Meridian 冻结发布差异归因（release: november-2026）
+事件头: 冻结 21 → 当前 33
+
+一、完整分母（两版各自保留，不互相覆盖）
+  frozen  故事=3  窗口观察=4  合格观察=4  排除={}
+  current 故事=3  窗口观察=6  合格观察=5  排除={"retracted": 1}
+  差值       故事=+0 窗口观察=+2 合格观察=+1
+
+二、地区结果（份额差注明含分母效应，不能直接当作倾向漂移）
+  [North] 故事分母 2→2 (+0)，合格观察 3→4 (+1)
+      positive 计数 2→2 (+0)  份额 1.0→1.0
+      来源 north-a 合格观察 2→2 (+0)
+      来源 north-b 合格观察 1→2 (+1)
+  [South] 故事分母 1→1 (+0)，合格观察 1→1 (+0)
+      negative 计数 0→1 (+1)  份额 0.0→1.0
+      positive 计数 1→0 (-1)  份额 1.0→0.0
+      来源 south-a 合格观察 1→1 (+0)
+
+三、逐故事归因（同故事多变化只给一个净效应，不拆项相加）
+  [North/story-1] revised  原因=member_merged
+      冻结成员=['local-fixture/a', 'local-fixture/b'] 当前成员=['local-fixture/a', 'local-fixture/b', 'local-fixture/b2']
+      净效应: 报告故事行+0 观察+1 成员倾向计数差={"positive": 1}
+      桶行 (technology/general) bucket_revised 故事级倾向差={"positive": 0}
+      成员变化 local-fixture/b2: member_merged (rev None→1, stance None→positive)
+  [North/story-3] exited  原因=member_retracted
+      冻结成员=['local-fixture/c'] 当前成员=[]
+      净效应: 报告故事行-1 观察-1 成员倾向计数差={"positive": -1}
+      桶行 (technology/general) bucket_removed 故事级倾向差={"positive": -1}
+      成员变化 local-fixture/c: member_retracted (rev 1→None, stance positive→None)
+  [North/story-5] entered  原因=member_entered
+      冻结成员=[] 当前成员=['local-fixture/e']
+      净效应: 报告故事行+1 观察+1 成员倾向计数差={"positive": 1}
+      桶行 (technology/general) bucket_added 故事级倾向差={"positive": 1}
+      成员变化 local-fixture/e: member_entered (rev None→1, stance None→positive)
+  [South/story-4] revised  原因=member_corrected, member_recoded
+      冻结成员=['local-fixture/d'] 当前成员=['local-fixture/d']
+      净效应: 报告故事行+0 观察+0 成员倾向计数差={"negative": 1, "positive": -1}
+      桶行 (technology/general) bucket_revised 故事级倾向差={"negative": 1, "positive": -1}
+      成员变化 local-fixture/d: member_corrected (rev 1→2, stance positive→negative)
+
+四、采集覆盖质量（与倾向分析分开报告）
+  覆盖检查通过=False；问题=[{"frame_id": "f-north-a", "reason": "drifted"}, {"frame_id": "f-north-b", "reason": "drifted"}, {"frame_id": "f-south", "reason": "drifted"}]
+  窗口 f-north-a (North/Outlet A): state=closed 封档数=2 当前数=2 漂移=True
+  窗口 f-north-b (North/Outlet B): state=closed 封档数=1 当前数=2 漂移=True
+  窗口 f-south (South/Outlet C): state=closed 封档数=1 当前数=1 漂移=True
+  解释: coverage drift is a collection-quality finding, not a stance change; never report missing coverage as a shifted lean
+
+五、对账结果
+  [PASS] story_delta_sum_equals_report (expected=0 actual=0)
+  [PASS] eligible_observation_delta_sum_equals_report (expected=1 actual=1)
+  [PASS] region_stance_delta:North:positive (expected=0 actual=0)
+  [PASS] region_stance_delta:South:negative (expected=1 actual=1)
+  [PASS] region_stance_delta:South:positive (expected=-1 actual=-1)
+  [PASS] region_story_denominator:North (expected=0 actual=0)
+  [PASS] region_story_denominator:South (expected=0 actual=0)
+  [PASS] source_eligible_delta_sum_equals_report (expected=1 actual=1)
+  [PASS] window_identity_eligible_plus_excluded (expected=2 actual=2)
+  [PASS] frozen_membership_rebuilt_from_release (expected=4 actual=4)
+  [PASS] frozen_membership_categories_unchanged (expected=True actual=True)
+  [PASS] current_membership_matches_live_report (expected=True actual=True)
+  [PASS] retracted_observations_retained_in_lineage (expected=True actual=True)
+
+六、发布后事件时间线（只影响当前视图，不改原报告）
+  #23 observation_retracted local-fixture/c
+  #24 observation_corrected local-fixture/d
+  #25 coding_submitted d-alice-r2
+  #26 coding_submitted d-bob-r2
+  #27 case_adjudicated local-fixture/d/2
+  #28 observation_ingested local-fixture/b2
+  #29 coding_submitted b2-alice-r1
+  #30 coding_submitted b2-bob-r1
+  #31 observation_ingested local-fixture/e
+  #32 coding_submitted e-alice-r1
+  #33 coding_submitted e-bob-r1

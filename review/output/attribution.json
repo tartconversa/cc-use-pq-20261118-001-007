@@ -1,0 +1,1282 @@
+{
+  "coverage": {
+    "current_head": 33,
+    "frames": [
+      {
+        "current_count": 2,
+        "drifted": true,
+        "end": "2026-12-01T00:00:00+00:00",
+        "expected_count": 2,
+        "frame_id": "f-north-a",
+        "frozen_actual_count": 2,
+        "note": "frame_members stay frozen at release; drift means the live window no longer matches the sealed coverage contract",
+        "outlet": "Outlet A",
+        "problems": [
+          "drifted"
+        ],
+        "region": "North",
+        "source_id": "north-a",
+        "start": "2026-11-01T00:00:00+00:00",
+        "state": "closed"
+      },
+      {
+        "current_count": 2,
+        "drifted": true,
+        "end": "2026-12-01T00:00:00+00:00",
+        "expected_count": 1,
+        "frame_id": "f-north-b",
+        "frozen_actual_count": 1,
+        "note": "frame_members stay frozen at release; drift means the live window no longer matches the sealed coverage contract",
+        "outlet": "Outlet B",
+        "problems": [
+          "drifted"
+        ],
+        "region": "North",
+        "source_id": "north-b",
+        "start": "2026-11-01T00:00:00+00:00",
+        "state": "closed"
+      },
+      {
+        "current_count": 1,
+        "drifted": true,
+        "end": "2026-12-01T00:00:00+00:00",
+        "expected_count": 1,
+        "frame_id": "f-south",
+        "frozen_actual_count": 1,
+        "note": "frame_members stay frozen at release; drift means the live window no longer matches the sealed coverage contract",
+        "outlet": "Outlet C",
+        "problems": [
+          "drifted"
+        ],
+        "region": "South",
+        "source_id": "south-a",
+        "start": "2026-11-01T00:00:00+00:00",
+        "state": "closed"
+      }
+    ],
+    "frozen_head": 21,
+    "interpretation": "coverage drift is a collection-quality finding, not a stance change; never report missing coverage as a shifted lean",
+    "passed": false,
+    "problems": [
+      {
+        "frame_id": "f-north-a",
+        "reason": "drifted"
+      },
+      {
+        "frame_id": "f-north-b",
+        "reason": "drifted"
+      },
+      {
+        "frame_id": "f-south",
+        "reason": "drifted"
+      }
+    ]
+  },
+  "current_head": 33,
+  "event_timeline": {
+    "current_head": 33,
+    "events": [
+      {
+        "entity_key": "local-fixture/c",
+        "event_no": 23,
+        "kind": "observation_retracted",
+        "occurred_at": "2026-11-18T09:33:51+00:00",
+        "payload_hash": "9ef0719d6439ccb7c2e791deea4506c46a34f2b18000dd1bcf843fafad94eb3a"
+      },
+      {
+        "entity_key": "local-fixture/d",
+        "event_no": 24,
+        "kind": "observation_corrected",
+        "occurred_at": "2026-11-18T09:33:51+00:00",
+        "payload_hash": "dbe1999e73f7ff9e6260a3115247f3b0fec036a9ca511163a13147ee1ac3fe60"
+      },
+      {
+        "entity_key": "d-alice-r2",
+        "event_no": 25,
+        "kind": "coding_submitted",
+        "occurred_at": "2026-11-18T09:33:51+00:00",
+        "payload_hash": "0a3bb2ca39d3deddf89ccd18561f3cea3908571342521d8fd23a4e6f25eaa0bf"
+      },
+      {
+        "entity_key": "d-bob-r2",
+        "event_no": 26,
+        "kind": "coding_submitted",
+        "occurred_at": "2026-11-18T09:33:51+00:00",
+        "payload_hash": "9f847528e3740a1c2336e09633b1a8f9f9b1550bc1971b4f848e6692a884d5bb"
+      },
+      {
+        "entity_key": "local-fixture/d/2",
+        "event_no": 27,
+        "kind": "case_adjudicated",
+        "occurred_at": "2026-11-18T09:33:51+00:00",
+        "payload_hash": "d07dac5380706b09d5d1474dc4b6b6bfa0e5c7216265b0e925728b581cdac5ca"
+      },
+      {
+        "entity_key": "local-fixture/b2",
+        "event_no": 28,
+        "kind": "observation_ingested",
+        "occurred_at": "2026-11-18T09:33:51+00:00",
+        "payload_hash": "75a052fd82639530707df09bc4859ffd6f5621bd4f101d49e8abef9d352862d3"
+      },
+      {
+        "entity_key": "b2-alice-r1",
+        "event_no": 29,
+        "kind": "coding_submitted",
+        "occurred_at": "2026-11-18T09:33:51+00:00",
+        "payload_hash": "2f2329b95eae5d4cafc032016fe95014c45c4bbb846c34ea800a6e4a3db58119"
+      },
+      {
+        "entity_key": "b2-bob-r1",
+        "event_no": 30,
+        "kind": "coding_submitted",
+        "occurred_at": "2026-11-18T09:33:51+00:00",
+        "payload_hash": "cdfeff70a6855282d1d6bf4c1f743ba1b11b84fda333e48708221aab46d0b7fc"
+      },
+      {
+        "entity_key": "local-fixture/e",
+        "event_no": 31,
+        "kind": "observation_ingested",
+        "occurred_at": "2026-11-18T09:33:51+00:00",
+        "payload_hash": "9a185f934219b807d60a43432189d00d1c1429fb61b7d4bca6c0134ec497bdd6"
+      },
+      {
+        "entity_key": "e-alice-r1",
+        "event_no": 32,
+        "kind": "coding_submitted",
+        "occurred_at": "2026-11-18T09:33:51+00:00",
+        "payload_hash": "5df832205c1ac8aaa45a21b9464a7d0820f26a357ab04d37002f773ea3add1f7"
+      },
+      {
+        "entity_key": "e-bob-r1",
+        "event_no": 33,
+        "kind": "coding_submitted",
+        "occurred_at": "2026-11-18T09:33:51+00:00",
+        "payload_hash": "bc623fc37f5978edbb3d9a82ac254bea958e1ea68b84929bb1b3d724e1d0345e"
+      }
+    ],
+    "events_by_observation": {
+      "local-fixture/b2": [
+        28
+      ],
+      "local-fixture/c": [
+        23
+      ],
+      "local-fixture/d": [
+        24,
+        27
+      ],
+      "local-fixture/e": [
+        31
+      ]
+    },
+    "frozen_head": 21
+  },
+  "frozen_head": 21,
+  "observation_changes": [
+    {
+      "current": {
+        "audience": "general",
+        "category": "eligible",
+        "external_id": "b2",
+        "observation_status": "active",
+        "origin": "local-fixture",
+        "outlet": "Outlet B",
+        "review_status": "consensus",
+        "revision": 1,
+        "source_id": "north-b",
+        "stance": "positive",
+        "story_key": "story-1",
+        "topic": "technology"
+      },
+      "external_id": "b2",
+      "frozen": null,
+      "lineage": [
+        {
+          "is_head": true,
+          "payload_hash": "75a052fd82639530707df09bc4859ffd6f5621bd4f101d49e8abef9d352862d3",
+          "reason": null,
+          "revision": 1,
+          "source_id": "north-b",
+          "status": "active",
+          "story_key": "story-1",
+          "supersedes": null
+        }
+      ],
+      "origin": "local-fixture",
+      "reasons": [
+        "entered_after_release"
+      ],
+      "revisions_detail": [
+        {
+          "coding_status": "consensus",
+          "decision_ids": [
+            "b2-alice-r1",
+            "b2-bob-r1"
+          ],
+          "revision": 1
+        }
+      ]
+    },
+    {
+      "current": {
+        "audience": "general",
+        "category": "retracted",
+        "external_id": "c",
+        "observation_status": "retracted",
+        "origin": "local-fixture",
+        "outlet": "Outlet A",
+        "review_status": "consensus",
+        "revision": 1,
+        "source_id": "north-a",
+        "stance": "positive",
+        "story_key": "story-3",
+        "topic": "technology"
+      },
+      "external_id": "c",
+      "frozen": {
+        "audience": "general",
+        "category": "eligible",
+        "external_id": "c",
+        "observation_status": "active",
+        "origin": "local-fixture",
+        "outlet": "Outlet A",
+        "review_status": "consensus",
+        "revision": 1,
+        "source_id": "north-a",
+        "stance": "positive",
+        "story_key": "story-3",
+        "topic": "technology"
+      },
+      "lineage": [
+        {
+          "is_head": true,
+          "payload_hash": "dbdceb5b4e134539867b4cf8883fcb30cc7eceea567240ceb98dce8a339ba78c",
+          "reason": "source issued correction and withdrew",
+          "revision": 1,
+          "source_id": "north-a",
+          "status": "retracted",
+          "story_key": "story-3",
+          "supersedes": null
+        }
+      ],
+      "origin": "local-fixture",
+      "reasons": [
+        "retracted",
+        "classification_changed"
+      ],
+      "revisions_detail": [
+        {
+          "coding_status": "consensus",
+          "decision_ids": [
+            "c-alice-r1",
+            "c-bob-r1"
+          ],
+          "revision": 1
+        }
+      ]
+    },
+    {
+      "current": {
+        "audience": "general",
+        "category": "eligible",
+        "external_id": "d",
+        "observation_status": "active",
+        "origin": "local-fixture",
+        "outlet": "Outlet C",
+        "review_status": "adjudicated",
+        "revision": 2,
+        "source_id": "south-a",
+        "stance": "negative",
+        "story_key": "story-4",
+        "topic": "technology"
+      },
+      "external_id": "d",
+      "frozen": {
+        "audience": "general",
+        "category": "eligible",
+        "external_id": "d",
+        "observation_status": "active",
+        "origin": "local-fixture",
+        "outlet": "Outlet C",
+        "review_status": "consensus",
+        "revision": 1,
+        "source_id": "south-a",
+        "stance": "positive",
+        "story_key": "story-4",
+        "topic": "technology"
+      },
+      "lineage": [
+        {
+          "is_head": false,
+          "payload_hash": "929f20e1902a3c46ea30eea1d3233d283de270adb45fe675ae69eaa69579fe45",
+          "reason": null,
+          "revision": 1,
+          "source_id": "south-a",
+          "status": "active",
+          "story_key": "story-4",
+          "supersedes": null
+        },
+        {
+          "is_head": true,
+          "payload_hash": "dbe1999e73f7ff9e6260a3115247f3b0fec036a9ca511163a13147ee1ac3fe60",
+          "reason": null,
+          "revision": 2,
+          "source_id": "south-a",
+          "status": "active",
+          "story_key": "story-4",
+          "supersedes": 1
+        }
+      ],
+      "origin": "local-fixture",
+      "reasons": [
+        "corrected",
+        "coding_changed"
+      ],
+      "revisions_detail": [
+        {
+          "coding_status": "consensus",
+          "decision_ids": [
+            "d-alice-r1",
+            "d-bob-r1"
+          ],
+          "revision": 1
+        },
+        {
+          "coding_status": "adjudicated",
+          "decision_ids": [
+            "d-alice-r2",
+            "d-bob-r2"
+          ],
+          "revision": 2
+        }
+      ]
+    },
+    {
+      "current": {
+        "audience": "general",
+        "category": "eligible",
+        "external_id": "e",
+        "observation_status": "active",
+        "origin": "local-fixture",
+        "outlet": "Outlet A",
+        "review_status": "consensus",
+        "revision": 1,
+        "source_id": "north-a",
+        "stance": "positive",
+        "story_key": "story-5",
+        "topic": "technology"
+      },
+      "external_id": "e",
+      "frozen": null,
+      "lineage": [
+        {
+          "is_head": true,
+          "payload_hash": "9a185f934219b807d60a43432189d00d1c1429fb61b7d4bca6c0134ec497bdd6",
+          "reason": null,
+          "revision": 1,
+          "source_id": "north-a",
+          "status": "active",
+          "story_key": "story-5",
+          "supersedes": null
+        }
+      ],
+      "origin": "local-fixture",
+      "reasons": [
+        "entered_after_release"
+      ],
+      "revisions_detail": [
+        {
+          "coding_status": "consensus",
+          "decision_ids": [
+            "e-alice-r1",
+            "e-bob-r1"
+          ],
+          "revision": 1
+        }
+      ]
+    }
+  ],
+  "query": {
+    "audiences": [],
+    "end": "2026-12-01T00:00:00+00:00",
+    "regions": [
+      "North",
+      "South"
+    ],
+    "start": "2026-11-01T00:00:00+00:00",
+    "topics": []
+  },
+  "query_hash": "5ba89e3556ac3a54e6927124297399b431e9ede2dc1cfb995d328a40164eacb4",
+  "reconciliation": {
+    "checks": [
+      {
+        "actual": 0,
+        "check": "story_delta_sum_equals_report",
+        "detail": null,
+        "expected": 0,
+        "passed": true
+      },
+      {
+        "actual": 1,
+        "check": "eligible_observation_delta_sum_equals_report",
+        "detail": null,
+        "expected": 1,
+        "passed": true
+      },
+      {
+        "actual": 0,
+        "check": "region_stance_delta:North:positive",
+        "detail": null,
+        "expected": 0,
+        "passed": true
+      },
+      {
+        "actual": 1,
+        "check": "region_stance_delta:South:negative",
+        "detail": null,
+        "expected": 1,
+        "passed": true
+      },
+      {
+        "actual": -1,
+        "check": "region_stance_delta:South:positive",
+        "detail": null,
+        "expected": -1,
+        "passed": true
+      },
+      {
+        "actual": 0,
+        "check": "region_story_denominator:North",
+        "detail": null,
+        "expected": 0,
+        "passed": true
+      },
+      {
+        "actual": 0,
+        "check": "region_story_denominator:South",
+        "detail": null,
+        "expected": 0,
+        "passed": true
+      },
+      {
+        "actual": 1,
+        "check": "source_eligible_delta_sum_equals_report",
+        "detail": null,
+        "expected": 1,
+        "passed": true
+      },
+      {
+        "actual": 2,
+        "check": "window_identity_eligible_plus_excluded",
+        "detail": null,
+        "expected": 2,
+        "passed": true
+      },
+      {
+        "actual": 4,
+        "check": "frozen_membership_rebuilt_from_release",
+        "detail": {
+          "categories": {
+            "eligible": 4
+          }
+        },
+        "expected": 4,
+        "passed": true
+      },
+      {
+        "actual": true,
+        "check": "frozen_membership_categories_unchanged",
+        "detail": "late reposts and retractions never rewrite the released membership",
+        "expected": true,
+        "passed": true
+      },
+      {
+        "actual": true,
+        "check": "current_membership_matches_live_report",
+        "detail": null,
+        "expected": true,
+        "passed": true
+      },
+      {
+        "actual": true,
+        "check": "retracted_observations_retained_in_lineage",
+        "detail": {
+          "retracted": [
+            {
+              "external_id": "c",
+              "origin": "local-fixture"
+            }
+          ]
+        },
+        "expected": true,
+        "passed": true
+      }
+    ],
+    "passed": true
+  },
+  "regions": [
+    {
+      "current_observation_count": 4,
+      "current_story_denominator": 2,
+      "frozen_observation_count": 3,
+      "frozen_story_denominator": 2,
+      "observation_count_delta": 1,
+      "outlet_eligible_delta": [
+        {
+          "current_eligible_observations": 2,
+          "eligible_delta": 0,
+          "frozen_eligible_observations": 2,
+          "outlet": "Outlet A"
+        },
+        {
+          "current_eligible_observations": 2,
+          "eligible_delta": 1,
+          "frozen_eligible_observations": 1,
+          "outlet": "Outlet B"
+        }
+      ],
+      "region": "North",
+      "source_eligible_delta": [
+        {
+          "current_eligible_observations": 2,
+          "eligible_delta": 0,
+          "frozen_eligible_observations": 2,
+          "source_id": "north-a"
+        },
+        {
+          "current_eligible_observations": 2,
+          "eligible_delta": 1,
+          "frozen_eligible_observations": 1,
+          "source_id": "north-b"
+        }
+      ],
+      "stances": {
+        "positive": {
+          "count_delta": 0,
+          "current_count": 2,
+          "current_share": 1.0,
+          "frozen_count": 2,
+          "frozen_share": 1.0,
+          "share_delta": 0.0,
+          "share_delta_note": "share changes blend denominator (membership) effects and coding effects; use count_delta plus per-story net_effect to separate them"
+        }
+      },
+      "story_count_delta": 0
+    },
+    {
+      "current_observation_count": 1,
+      "current_story_denominator": 1,
+      "frozen_observation_count": 1,
+      "frozen_story_denominator": 1,
+      "observation_count_delta": 0,
+      "outlet_eligible_delta": [
+        {
+          "current_eligible_observations": 1,
+          "eligible_delta": 0,
+          "frozen_eligible_observations": 1,
+          "outlet": "Outlet C"
+        }
+      ],
+      "region": "South",
+      "source_eligible_delta": [
+        {
+          "current_eligible_observations": 1,
+          "eligible_delta": 0,
+          "frozen_eligible_observations": 1,
+          "source_id": "south-a"
+        }
+      ],
+      "stances": {
+        "negative": {
+          "count_delta": 1,
+          "current_count": 1,
+          "current_share": 1.0,
+          "frozen_count": 0,
+          "frozen_share": 0.0,
+          "share_delta": 1.0,
+          "share_delta_note": "share changes blend denominator (membership) effects and coding effects; use count_delta plus per-story net_effect to separate them"
+        },
+        "positive": {
+          "count_delta": -1,
+          "current_count": 0,
+          "current_share": 0.0,
+          "frozen_count": 1,
+          "frozen_share": 1.0,
+          "share_delta": -1.0,
+          "share_delta_note": "share changes blend denominator (membership) effects and coding effects; use count_delta plus per-story net_effect to separate them"
+        }
+      },
+      "story_count_delta": 0
+    }
+  ],
+  "release_id": "november-2026",
+  "story_attributions": [
+    {
+      "bucket_transitions": [
+        {
+          "audience": "general",
+          "change": "bucket_revised",
+          "current": {
+            "audience": "general",
+            "member_keys": [
+              [
+                "local-fixture",
+                "a"
+              ],
+              [
+                "local-fixture",
+                "b"
+              ],
+              [
+                "local-fixture",
+                "b2"
+              ]
+            ],
+            "observation_count": 3,
+            "stance_counts": {
+              "positive": 3
+            },
+            "story_stance": "positive",
+            "topic": "technology"
+          },
+          "frozen": {
+            "audience": "general",
+            "member_keys": [
+              [
+                "local-fixture",
+                "a"
+              ],
+              [
+                "local-fixture",
+                "b"
+              ]
+            ],
+            "observation_count": 2,
+            "stance_counts": {
+              "positive": 2
+            },
+            "story_stance": "positive",
+            "topic": "technology"
+          },
+          "story_stance_delta": {
+            "positive": 0
+          },
+          "topic": "technology"
+        }
+      ],
+      "classification": "revised",
+      "current": {
+        "bucket_rows": [
+          {
+            "audience": "general",
+            "member_keys": [
+              [
+                "local-fixture",
+                "a"
+              ],
+              [
+                "local-fixture",
+                "b"
+              ],
+              [
+                "local-fixture",
+                "b2"
+              ]
+            ],
+            "observation_count": 3,
+            "stance_counts": {
+              "positive": 3
+            },
+            "story_stance": "positive",
+            "topic": "technology"
+          }
+        ],
+        "excluded": [],
+        "members": [
+          {
+            "audience": "general",
+            "category": "eligible",
+            "external_id": "a",
+            "observation_status": "active",
+            "origin": "local-fixture",
+            "outlet": "Outlet A",
+            "review_status": "consensus",
+            "revision": 1,
+            "source_id": "north-a",
+            "stance": "positive",
+            "story_key": "story-1",
+            "topic": "technology"
+          },
+          {
+            "audience": "general",
+            "category": "eligible",
+            "external_id": "b",
+            "observation_status": "active",
+            "origin": "local-fixture",
+            "outlet": "Outlet B",
+            "review_status": "consensus",
+            "revision": 1,
+            "source_id": "north-b",
+            "stance": "positive",
+            "story_key": "story-1",
+            "topic": "technology"
+          },
+          {
+            "audience": "general",
+            "category": "eligible",
+            "external_id": "b2",
+            "observation_status": "active",
+            "origin": "local-fixture",
+            "outlet": "Outlet B",
+            "review_status": "consensus",
+            "revision": 1,
+            "source_id": "north-b",
+            "stance": "positive",
+            "story_key": "story-1",
+            "topic": "technology"
+          }
+        ],
+        "observation_count": 3,
+        "present": true
+      },
+      "frozen": {
+        "bucket_rows": [
+          {
+            "audience": "general",
+            "member_keys": [
+              [
+                "local-fixture",
+                "a"
+              ],
+              [
+                "local-fixture",
+                "b"
+              ]
+            ],
+            "observation_count": 2,
+            "stance_counts": {
+              "positive": 2
+            },
+            "story_stance": "positive",
+            "topic": "technology"
+          }
+        ],
+        "excluded": [],
+        "members": [
+          {
+            "audience": "general",
+            "category": "eligible",
+            "external_id": "a",
+            "observation_status": "active",
+            "origin": "local-fixture",
+            "outlet": "Outlet A",
+            "review_status": "consensus",
+            "revision": 1,
+            "source_id": "north-a",
+            "stance": "positive",
+            "story_key": "story-1",
+            "topic": "technology"
+          },
+          {
+            "audience": "general",
+            "category": "eligible",
+            "external_id": "b",
+            "observation_status": "active",
+            "origin": "local-fixture",
+            "outlet": "Outlet B",
+            "review_status": "consensus",
+            "revision": 1,
+            "source_id": "north-b",
+            "stance": "positive",
+            "story_key": "story-1",
+            "topic": "technology"
+          }
+        ],
+        "observation_count": 2,
+        "present": true
+      },
+      "member_changes": [
+        {
+          "after": {
+            "audience": "general",
+            "category": "eligible",
+            "external_id": "b2",
+            "observation_status": "active",
+            "origin": "local-fixture",
+            "outlet": "Outlet B",
+            "review_status": "consensus",
+            "revision": 1,
+            "source_id": "north-b",
+            "stance": "positive",
+            "story_key": "story-1",
+            "topic": "technology"
+          },
+          "before": null,
+          "external_id": "b2",
+          "origin": "local-fixture",
+          "reason": "member_merged"
+        }
+      ],
+      "net_effect": {
+        "current_stance_counts": {
+          "positive": 3
+        },
+        "frozen_stance_counts": {
+          "positive": 2
+        },
+        "observation_count_delta": 1,
+        "stance_count_delta": {
+          "positive": 1
+        },
+        "story_row_delta": 0,
+        "story_stance_delta": {
+          "positive": 0
+        }
+      },
+      "reasons": [
+        "member_merged"
+      ],
+      "region": "North",
+      "story_key": "story-1"
+    },
+    {
+      "bucket_transitions": [
+        {
+          "audience": "general",
+          "change": "bucket_removed",
+          "current": null,
+          "frozen": {
+            "audience": "general",
+            "member_keys": [
+              [
+                "local-fixture",
+                "c"
+              ]
+            ],
+            "observation_count": 1,
+            "stance_counts": {
+              "positive": 1
+            },
+            "story_stance": "positive",
+            "topic": "technology"
+          },
+          "story_stance_delta": {
+            "positive": -1
+          },
+          "topic": "technology"
+        }
+      ],
+      "classification": "exited",
+      "current": {
+        "bucket_rows": [],
+        "excluded": [
+          {
+            "category": "retracted",
+            "external_id": "c",
+            "origin": "local-fixture"
+          }
+        ],
+        "members": [],
+        "observation_count": 0,
+        "present": false
+      },
+      "frozen": {
+        "bucket_rows": [
+          {
+            "audience": "general",
+            "member_keys": [
+              [
+                "local-fixture",
+                "c"
+              ]
+            ],
+            "observation_count": 1,
+            "stance_counts": {
+              "positive": 1
+            },
+            "story_stance": "positive",
+            "topic": "technology"
+          }
+        ],
+        "excluded": [],
+        "members": [
+          {
+            "audience": "general",
+            "category": "eligible",
+            "external_id": "c",
+            "observation_status": "active",
+            "origin": "local-fixture",
+            "outlet": "Outlet A",
+            "review_status": "consensus",
+            "revision": 1,
+            "source_id": "north-a",
+            "stance": "positive",
+            "story_key": "story-3",
+            "topic": "technology"
+          }
+        ],
+        "observation_count": 1,
+        "present": true
+      },
+      "member_changes": [
+        {
+          "after": null,
+          "before": {
+            "audience": "general",
+            "category": "eligible",
+            "external_id": "c",
+            "observation_status": "active",
+            "origin": "local-fixture",
+            "outlet": "Outlet A",
+            "review_status": "consensus",
+            "revision": 1,
+            "source_id": "north-a",
+            "stance": "positive",
+            "story_key": "story-3",
+            "topic": "technology"
+          },
+          "external_id": "c",
+          "origin": "local-fixture",
+          "reason": "member_retracted"
+        }
+      ],
+      "net_effect": {
+        "current_stance_counts": {},
+        "frozen_stance_counts": {
+          "positive": 1
+        },
+        "observation_count_delta": -1,
+        "stance_count_delta": {
+          "positive": -1
+        },
+        "story_row_delta": -1,
+        "story_stance_delta": {
+          "positive": -1
+        }
+      },
+      "reasons": [
+        "member_retracted"
+      ],
+      "region": "North",
+      "story_key": "story-3"
+    },
+    {
+      "bucket_transitions": [
+        {
+          "audience": "general",
+          "change": "bucket_added",
+          "current": {
+            "audience": "general",
+            "member_keys": [
+              [
+                "local-fixture",
+                "e"
+              ]
+            ],
+            "observation_count": 1,
+            "stance_counts": {
+              "positive": 1
+            },
+            "story_stance": "positive",
+            "topic": "technology"
+          },
+          "frozen": null,
+          "story_stance_delta": {
+            "positive": 1
+          },
+          "topic": "technology"
+        }
+      ],
+      "classification": "entered",
+      "current": {
+        "bucket_rows": [
+          {
+            "audience": "general",
+            "member_keys": [
+              [
+                "local-fixture",
+                "e"
+              ]
+            ],
+            "observation_count": 1,
+            "stance_counts": {
+              "positive": 1
+            },
+            "story_stance": "positive",
+            "topic": "technology"
+          }
+        ],
+        "excluded": [],
+        "members": [
+          {
+            "audience": "general",
+            "category": "eligible",
+            "external_id": "e",
+            "observation_status": "active",
+            "origin": "local-fixture",
+            "outlet": "Outlet A",
+            "review_status": "consensus",
+            "revision": 1,
+            "source_id": "north-a",
+            "stance": "positive",
+            "story_key": "story-5",
+            "topic": "technology"
+          }
+        ],
+        "observation_count": 1,
+        "present": true
+      },
+      "frozen": {
+        "bucket_rows": [],
+        "excluded": [],
+        "members": [],
+        "observation_count": 0,
+        "present": false
+      },
+      "member_changes": [
+        {
+          "after": {
+            "audience": "general",
+            "category": "eligible",
+            "external_id": "e",
+            "observation_status": "active",
+            "origin": "local-fixture",
+            "outlet": "Outlet A",
+            "review_status": "consensus",
+            "revision": 1,
+            "source_id": "north-a",
+            "stance": "positive",
+            "story_key": "story-5",
+            "topic": "technology"
+          },
+          "before": null,
+          "external_id": "e",
+          "origin": "local-fixture",
+          "reason": "member_entered"
+        }
+      ],
+      "net_effect": {
+        "current_stance_counts": {
+          "positive": 1
+        },
+        "frozen_stance_counts": {},
+        "observation_count_delta": 1,
+        "stance_count_delta": {
+          "positive": 1
+        },
+        "story_row_delta": 1,
+        "story_stance_delta": {
+          "positive": 1
+        }
+      },
+      "reasons": [
+        "member_entered"
+      ],
+      "region": "North",
+      "story_key": "story-5"
+    },
+    {
+      "bucket_transitions": [
+        {
+          "audience": "general",
+          "change": "bucket_revised",
+          "current": {
+            "audience": "general",
+            "member_keys": [
+              [
+                "local-fixture",
+                "d"
+              ]
+            ],
+            "observation_count": 1,
+            "stance_counts": {
+              "negative": 1
+            },
+            "story_stance": "negative",
+            "topic": "technology"
+          },
+          "frozen": {
+            "audience": "general",
+            "member_keys": [
+              [
+                "local-fixture",
+                "d"
+              ]
+            ],
+            "observation_count": 1,
+            "stance_counts": {
+              "positive": 1
+            },
+            "story_stance": "positive",
+            "topic": "technology"
+          },
+          "story_stance_delta": {
+            "negative": 1,
+            "positive": -1
+          },
+          "topic": "technology"
+        }
+      ],
+      "classification": "revised",
+      "current": {
+        "bucket_rows": [
+          {
+            "audience": "general",
+            "member_keys": [
+              [
+                "local-fixture",
+                "d"
+              ]
+            ],
+            "observation_count": 1,
+            "stance_counts": {
+              "negative": 1
+            },
+            "story_stance": "negative",
+            "topic": "technology"
+          }
+        ],
+        "excluded": [],
+        "members": [
+          {
+            "audience": "general",
+            "category": "eligible",
+            "external_id": "d",
+            "observation_status": "active",
+            "origin": "local-fixture",
+            "outlet": "Outlet C",
+            "review_status": "adjudicated",
+            "revision": 2,
+            "source_id": "south-a",
+            "stance": "negative",
+            "story_key": "story-4",
+            "topic": "technology"
+          }
+        ],
+        "observation_count": 1,
+        "present": true
+      },
+      "frozen": {
+        "bucket_rows": [
+          {
+            "audience": "general",
+            "member_keys": [
+              [
+                "local-fixture",
+                "d"
+              ]
+            ],
+            "observation_count": 1,
+            "stance_counts": {
+              "positive": 1
+            },
+            "story_stance": "positive",
+            "topic": "technology"
+          }
+        ],
+        "excluded": [],
+        "members": [
+          {
+            "audience": "general",
+            "category": "eligible",
+            "external_id": "d",
+            "observation_status": "active",
+            "origin": "local-fixture",
+            "outlet": "Outlet C",
+            "review_status": "consensus",
+            "revision": 1,
+            "source_id": "south-a",
+            "stance": "positive",
+            "story_key": "story-4",
+            "topic": "technology"
+          }
+        ],
+        "observation_count": 1,
+        "present": true
+      },
+      "member_changes": [
+        {
+          "after": {
+            "audience": "general",
+            "category": "eligible",
+            "external_id": "d",
+            "observation_status": "active",
+            "origin": "local-fixture",
+            "outlet": "Outlet C",
+            "review_status": "adjudicated",
+            "revision": 2,
+            "source_id": "south-a",
+            "stance": "negative",
+            "story_key": "story-4",
+            "topic": "technology"
+          },
+          "before": {
+            "audience": "general",
+            "category": "eligible",
+            "external_id": "d",
+            "observation_status": "active",
+            "origin": "local-fixture",
+            "outlet": "Outlet C",
+            "review_status": "consensus",
+            "revision": 1,
+            "source_id": "south-a",
+            "stance": "positive",
+            "story_key": "story-4",
+            "topic": "technology"
+          },
+          "external_id": "d",
+          "origin": "local-fixture",
+          "reason": "member_corrected"
+        }
+      ],
+      "net_effect": {
+        "current_stance_counts": {
+          "negative": 1
+        },
+        "frozen_stance_counts": {
+          "positive": 1
+        },
+        "observation_count_delta": 0,
+        "stance_count_delta": {
+          "negative": 1,
+          "positive": -1
+        },
+        "story_row_delta": 0,
+        "story_stance_delta": {
+          "negative": 1,
+          "positive": -1
+        }
+      },
+      "reasons": [
+        "member_corrected",
+        "member_recoded"
+      ],
+      "region": "South",
+      "story_key": "story-4"
+    }
+  ],
+  "totals": {
+    "current": {
+      "eligible_observations": 5,
+      "excluded": {
+        "retracted": 1
+      },
+      "observations_in_window": 6,
+      "story_count": 3
+    },
+    "deltas": {
+      "eligible_observations": 1,
+      "excluded": {
+        "retracted": 1
+      },
+      "observations_in_window": 2,
+      "story_count": 0
+    },
+    "frozen": {
+      "eligible_observations": 4,
+      "excluded": {},
+      "observations_in_window": 4,
+      "story_count": 3
+    }
+  }
+}

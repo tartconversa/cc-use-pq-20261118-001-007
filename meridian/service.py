@@ -1,5 +1,6 @@
 """连接来源、证据、编码、分析和发布的应用服务。"""
 from .analytics import EvidenceAnalytics
+from .attribution import ReleaseAttribution
 from .audit import IntegrityAudit
 from .batches import BatchImporter
 from .coding import CodingDesk
@@ -27,6 +28,9 @@ class MeridianService:
         self.diagnostics = ReviewDiagnostics(self.store, self.observations, self.sources,
                                               self.coding, self.analytics, self.frames)
         self.releases = ReleaseShelf(self.store, self.analytics, self.frames, self.audit)
+        self.attribution = ReleaseAttribution(
+            self.store, self.observations, self.sources, self.coding, self.analytics,
+            self.frames, self.releases)
         self.provenance = ProvenanceExplorer(self.store, self.observations, self.coding,
                                               self.analytics, self.releases)
         self.exports = EvidenceExporter(self.store, self.observations, self.sources,

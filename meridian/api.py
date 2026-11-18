@@ -247,6 +247,18 @@ def create_app(path="meridian.sqlite3"):
     def release_changes(release_id: str):
         return service.provenance.release_changes(release_id)
 
+    @app.get("/releases/{release_id}/attribution")
+    def release_attribution(release_id: str):
+        return service.attribution.attribute(release_id)
+
+    @app.get("/releases/{release_id}/attribution/export")
+    def export_attribution(release_id: str):
+        return service.attribution.export(release_id)
+
+    @app.get("/releases/{release_id}/observations/{origin}/{external_id}/trace")
+    def trace_release_observation(release_id: str, origin: str, external_id: str):
+        return service.attribution.trace_observation(release_id, origin, external_id)
+
     @app.get("/releases/{release_id}/export")
     def export_release(release_id: str):
         return service.exports.frozen(release_id)
